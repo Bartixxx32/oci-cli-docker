@@ -22,6 +22,6 @@ RUN set -ex \
     && wget -qO- -O oci-cli.zip "https://github.com/oracle/oci-cli/releases/download/v${CLI_VERSION}/oci-cli-${CLI_VERSION}.zip" \
     && unzip oci-cli.zip -d .. \
     && rm oci-cli.zip \
-    && pip install oci_cli-*-py2.py3-none-any.whl
+    && pip install oci_cli-*.whl
 
 RUN yes | oci setup autocomplete
