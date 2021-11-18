@@ -16,7 +16,7 @@ LABEL maintainer="Jason Poon" \
 WORKDIR /oci-cli
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends unzip wget
+    && apt-get install -y --no-install-recommends unzip wget curl
 
 RUN set -ex \
     && wget -qO- -O oci-cli.zip "https://github.com/oracle/oci-cli/releases/download/v${CLI_VERSION}/oci-cli-${CLI_VERSION}.zip" \
